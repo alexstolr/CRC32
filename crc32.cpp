@@ -6,9 +6,6 @@
 
 #include "crc32.h"
 #include <stdio.h>
-#include <inttypes.h>
-#include <iostream>
-#include <sstream>
 //#define DEBUG
 
 crc32::crc32() {
