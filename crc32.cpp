@@ -16,7 +16,7 @@ uint32_t crc32::calcCrc(char * buf,int len) {
 
     uint32_t crc = 0xFFFFFFFFUL; // Max value of unsigned int
     for (int i = 0; i < len; i++) {
-        crc = crc32_table[(crc ^ buf[i]) & 0xFF] ^ (crc >> 8);
+        crc = crc32_table[(crc ^ (uint8_t)buf[i]) & 0xFF] ^ (crc >> 8);
     }
 #ifdef DEBUG
     crc = crc ^ 0xFFFFFFFFUL;
